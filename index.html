@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Background Image Blur on Scroll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <img src="bkg1.jpg" class="img-blur">
+  </section>
+  <section>
+    <h1>Background Image Blur on Scroll</h1>
+  </section>
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      $('.img-blur').css({filter: "blur(" + (scroll/50) + "px)"})
+    })
+  </script>
+</body>
+
+</html>
